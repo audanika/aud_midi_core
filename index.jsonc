@@ -1,0 +1,23 @@
+// @license
+// Copyright (c) Audanika
+//
+// Use of this source code is governed by terms that can be
+// found in the LICENSE file in the root of this package.
+
+{
+  "name": "aud_midi_core",
+  "summary": "Runtime contracts of the aud_midi family: backend interfaces, a fake backend, the software scheduler, the port registry and diagnostics.",
+  "domain": [
+    "Backend-independent MIDI runtime contracts"
+  ],
+  "interfaces": {
+    "uses": {
+      "aud_midi_standard": "models, messages, codecs"
+    },
+    "usedBy": {
+      "aud_midi_network": "consumes this package",
+      "aud_midi": "consumes this package",
+      "all backends": "consumes this package"
+    }
+  }
+}
