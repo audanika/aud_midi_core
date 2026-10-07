@@ -1,6 +1,6 @@
 name: aud_midi_core
 description: "Runtime contracts for aud_midi: backend interfaces, fake backend, scheduler, port registry, diagnostics"
-version: 0.0.0
+version: 0.1.0
 homepage: https://github.com/audmidi/aud_midi_core
 repository: https://github.com/audmidi/aud_midi_core
 topics:
