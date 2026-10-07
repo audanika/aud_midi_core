@@ -1,9 +1,8 @@
 name: aud_midi_core
 description: "Runtime contracts for aud_midi: backend interfaces, fake backend, scheduler, port registry, diagnostics"
-version: 0.0.0
-homepage: https://github.com/audanika/aud_midi_core
-repository: https://github.com/audanika/aud_midi_core
-publish_to: none
+version: 0.1.0
+homepage: https://github.com/audmidi/aud_midi_core
+repository: https://github.com/audmidi/aud_midi_core
 topics:
   - midi
   - audio
@@ -18,8 +17,4 @@ dev_dependencies:
   lints: ^6.1.0
   test: ^1.32.0
 dependencies:
-  aud_midi_standard:
-    git:
-      url: git@github.com:audanika/aud_midi_standard.git
-      tag_pattern: "{{version}}"
-    version: ^0.0.0
+  aud_midi_standard: ^0.1.0

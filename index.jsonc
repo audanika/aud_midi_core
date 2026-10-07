@@ -6,18 +6,21 @@
 
 {
   "name": "aud_midi_core",
-  "summary": "Runtime contracts of the aud_midi family: backend interfaces, a fake backend, the software scheduler, the port registry and diagnostics.",
+  "summary": "Runtime of the aud_midi family: backend contracts, the MIDI engine with input/output pipelines, scheduling, port registry, diagnostics, composite and BLE-MIDI backends, fake backend for tests.",
   "domain": [
-    "Backend-independent MIDI runtime contracts"
+    "MidiBackend contract and sub-APIs, package clock, MidiException",
+    "MidiEngine: parse/decode, JR timestamps, translation, bounded queues, software scheduler with lookahead, panic, hotplug",
+    "FakeMidiBackend contract tests; no dart:io, dart:ffi, dart:isolate"
   ],
   "interfaces": {
     "uses": {
-      "aud_midi_standard": "models, messages, codecs"
+      "aud_midi_standard": "messages, models, MidiPacket, codecs, translators"
     },
     "usedBy": {
-      "aud_midi_network": "consumes this package",
-      "aud_midi": "consumes this package",
-      "all backends": "consumes this package"
+      "aud_midi": "hosts MidiEngine in the MIDI isolate, MidiCompositeBackend, re-exports",
+      "aud_midi_network": "MidiBackend, MidiNetworkBackend, MidiServiceAdvertiser",
+      "aud_midi_apple, aud_midi_android, aud_midi_windows, aud_midi_linux, aud_midi_web": "MidiBackend, MidiBackendHost, MidiClockMapper, FakeMidiBackend in tests",
+      "aud_midi_linux": "MidiBleBluetoothBackend over a BlueZ MidiBleTransport"
     }
   }
 }
