@@ -2,7 +2,7 @@
 
 Runtime contracts of the aud_midi family: backend interfaces, a fake backend, the software scheduler, the port registry and diagnostics.
 
-Part of the aud_midi family, see [aud_midi](https://github.com/audanika/aud_midi).
+Part of the aud_midi family, see [aud_midi](https://github.com/audmidi/aud_midi).
 
 ## Goals
 
@@ -22,7 +22,7 @@ Implemented; every file is covered 100 % by its own tests on the Dart VM, and th
 - `MidiCompositeBackend` combines backends, `MidiBleBluetoothBackend` runs BLE-MIDI over a GATT client.
 - `FakeMidiBackend` with loopback, hotplug, failures and in-memory virtual ports, BLE and network sessions. The contract tests run against it: they prove the Dart abstraction, not a native binding.
 
-See the plan in [aud_midi_pm](https://github.com/audanika/aud_midi_pm/blob/main/doc/2026-Q4/tickets/2026-10-06-aud_midi_01-initial-midi-implementation.md).
+See the plan in [aud_midi_pm](https://github.com/audmidi/aud_midi_pm/blob/main/doc/2026-Q4/tickets/2026-10-06-aud_midi_01-initial-midi-implementation.md).
 
 ## Installation
 
